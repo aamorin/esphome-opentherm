@@ -22,7 +22,7 @@ async def new_openthermswitch(config: Dict[str, Any]) -> cg.Pvariable:
     return var
 
 def get_entity_validation_schema(entity: schema.SwitchSchema) -> cv.Schema:
-    return switch.SWITCH_SCHEMA.extend({
+    return switch.switch_schema().extend({
         cv.GenerateID(): cv.declare_id(OpenthermSwitch),
         cv.Optional(CONF_MODE, entity["default_mode"]): 
             cv.enum({

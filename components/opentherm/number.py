@@ -20,7 +20,7 @@ async def new_openthermnumber(config: Dict[str, Any]) -> cg.Pvariable:
     return var
 
 def get_entity_validation_schema(entity: schema.InputSchema) -> cv.Schema:
-    return number.NUMBER_SCHEMA \
+    return number.number_schema() \
         .extend({
             cv.GenerateID(): cv.declare_id(OpenthermNumber),
             cv.Optional(CONF_UNIT_OF_MEASUREMENT, entity["unit_of_measurement"]): cv.string_strict,

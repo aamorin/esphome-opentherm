@@ -21,7 +21,7 @@ async def new_openthermoutput(config: Dict[str, Any], key: str, _hub: cg.MockObj
     return var
 
 def get_entity_validation_schema(entity: schema.InputSchema) -> cv.Schema:
-    return output.FLOAT_OUTPUT_SCHEMA \
+    return output.float_output_schema() \
         .extend({ cv.GenerateID(): cv.declare_id(OpenthermOutput) }) \
         .extend(input.input_schema(entity)) \
         .extend(cv.COMPONENT_SCHEMA)
