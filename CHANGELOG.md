@@ -2,6 +2,8 @@
 
 ## vNext
 
+## v0.1.1 - 2025-08-25
+
 ### Fixed
 
 - Fixed compatibility with ESPHome 2025.8.0 by removing deprecated `_UNDEF` references
